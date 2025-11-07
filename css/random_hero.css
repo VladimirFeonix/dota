@@ -23,3 +23,24 @@
     color: var(--foreground);
     background: var(--card);
 }
+
+.challenges-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.challenge-card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #333;
+    font-size: 18px;
+    color: var(--foreground);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: card-fade-in 0.5s forwards;
+}

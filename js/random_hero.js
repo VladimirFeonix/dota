@@ -18,9 +18,31 @@ const heroDisplay = document.getElementById('hero-display');
 const randomButton = document.getElementById('random-button');
 const randomSound = new Audio('/dota/sound/random.mp3');
 
+const challenges = [
+    "Собрать Aghanim's Scepter до 20 минуты.",
+    "Купить 5 Tango и отдать их своим союзникам.",
+    "Сделать First Blood.",
+    "Не умереть ни разу за игру.",
+    "Собрать Divine Rapier.",
+    "Сделать Rampage.",
+    "Купить Boots of Travel до 15 минуты.",
+    "Собрать 3 предмета с активной способностью.",
+    "Нанести больше всех урона в команде.",
+    "Вылечить больше всех в команде.",
+    "Поставить больше всех вардов в команде.",
+    "Сломать первым вражескую башню.",
+    "Убить Рошана в одиночку.",
+    "Собрать Hand of Midas до 10 минуты.",
+    "Купить Blink Dagger до 12 минуты."
+];
+
+const challengesContainer = document.getElementById('challenges-container');
+
 randomButton.addEventListener('click', () => {
     randomSound.currentTime = 0;
     randomSound.play();
+
+    challengesContainer.innerHTML = '';
 
     let intervalCount = 0;
     const interval = setInterval(() => {
@@ -29,6 +51,26 @@ randomButton.addEventListener('click', () => {
         heroDisplay.textContent = heroes[randomIndex];
         if (intervalCount > 20) {
             clearInterval(interval);
+            displayChallenges();
         }
     }, 100);
 });
+
+function displayChallenges() {
+    const selectedChallenges = [];
+    while (selectedChallenges.length < 3) {
+        const randomIndex = Math.floor(Math.random() * challenges.length);
+        const randomChallenge = challenges[randomIndex];
+        if (!selectedChallenges.includes(randomChallenge)) {
+            selectedChallenges.push(randomChallenge);
+        }
+    }
+
+    selectedChallenges.forEach((challenge, index) => {
+        const challengeCard = document.createElement('div');
+        challengeCard.classList.add('challenge-card');
+        challengeCard.textContent = challenge;
+        challengeCard.style.animationDelay = `${index * 0.2}s`;
+        challengesContainer.appendChild(challengeCard);
+    });
+}
