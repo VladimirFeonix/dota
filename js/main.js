@@ -1,137 +1,69 @@
-// Добавьте перед другими импортами
-import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js';
-import { initializeApp, randomizeHeroes } from './core.js';
-import { handleCardClick, handleMobileDoubleTap } from './events.js';
-import { audioManager } from './audio.js';
-import { challengeSystem } from './challenges.js';
-
-// Ждем полной загрузки DOM и всех ресурсов
-window.addEventListener('load', () => {
-    initializeApp();
-
-    // Даем время для полной инициализации перед показом челленджей
-    setTimeout(() => {
-        if (window.challengeSystem) {
-            window.challengeSystem.updateCardsChallenges();
+(function () {
+    const header = document.querySelector ('.header');
+    window.onscroll = () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header_active')
+        } else {
+            header.classList.remove('header_active')
         }
-    }, 1500);
-});
-
-// Обработчики событий - только после полной загрузки
-document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('click', (e) => {
-        // Пропускаем клики по плашке челленджа
-        if (e.target.closest('.challenge-display')) {
-            return;
-        }
-        
-        if (e.target.closest('.option')) {
-            handleCardClick(e);
-            const card = e.target.closest('.option');
-            if (window.challengeSystem) {
-                window.challengeSystem.updateCardChallenge(card);
-            }
-        }
-    });
-    
-    document.addEventListener('touchstart', (e) => {
-        // Пропускаем тапы по плашке челленджа
-        if (e.target.closest('.challenge-display')) {
-            return;
-        }
-        
-        if (e.target.closest('.option')) {
-            handleMobileDoubleTap(e);
-            const card = e.target.closest('.option');
-            if (window.challengeSystem) {
-                window.challengeSystem.updateCardChallenge(card);
-            }
-        }
-    });
-
-    // Cursor follower logic
-    const cursorFollower = document.querySelector('.cursor-follower');
-    if (cursorFollower) {
-        document.addEventListener('mousemove', e => {
-            cursorFollower.style.left = e.clientX + 'px';
-            cursorFollower.style.top = e.clientY + 'px';
-        });
     }
+}());
 
-    // Particle animation logic
-    const particleContainer = document.getElementById('particle-container');
-    if (particleContainer) {
-        const canvas = document.createElement('canvas');
-        particleContainer.appendChild(canvas);
-        const ctx = canvas.getContext('2d');
-        let particles = [];
+// Theme switcher
+const themeSwitcher = document.getElementById('theme-switcher');
+const body = document.body;
 
-        const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
-
-        class Particle {
-            constructor(x, y, directionX, directionY, size, color) {
-                this.x = x;
-                this.y = y;
-                this.directionX = directionX;
-                this.directionY = directionY;
-                this.size = size;
-                this.color = color;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-                ctx.fillStyle = this.color;
-                ctx.fill();
-            }
-            update() {
-                if (this.x > canvas.width || this.x < 0) {
-                    this.directionX = -this.directionX;
-                }
-                if (this.y > canvas.height || this.y < 0) {
-                    this.directionY = -this.directionY;
-                }
-                this.x += this.directionX;
-                this.y += this.directionY;
-                this.draw();
-            }
-        }
-
-        const initParticles = () => {
-            particles = [];
-            let numberOfParticles = (canvas.height * canvas.width) / 9000;
-            for (let i = 0; i < numberOfParticles; i++) {
-                let size = (Math.random() * 2) + 1;
-                let x = (Math.random() * ((window.innerWidth - size * 2) - (size * 2)) + size * 2);
-                let y = (Math.random() * ((window.innerHeight - size * 2) - (size * 2)) + size * 2);
-                let directionX = (Math.random() * .4) - .2;
-                let directionY = (Math.random() * .4) - .2;
-                let color = 'rgba(255, 255, 255, 0.3)';
-                particles.push(new Particle(x, y, directionX, directionY, size, color));
-            }
-        };
-
-        const animateParticles = () => {
-            requestAnimationFrame(animateParticles);
-            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-            }
-        };
-
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            initParticles();
-        });
-
-        resizeCanvas();
-        initParticles();
-        animateParticles();
+themeSwitcher.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    if (body.classList.contains('light-theme')) {
+        themeSwitcher.textContent = '☀️';
+    } else {
+        themeSwitcher.textContent = '🌙';
     }
 });
 
-// Глобальные функции
-window.randomizeHeroes = randomizeHeroes;
-window.challengeSystem = challengeSystem;
+// Cursor Follower
+const cursorFollower = document.querySelector('.cursor-follower');
+window.addEventListener('mousemove', e => {
+    cursorFollower.style.top = e.pageY + 'px';
+    cursorFollower.style.left = e.pageX + 'px';
+});
+
+// Particle Background
+const particleContainer = document.createElement('div');
+particleContainer.id = 'particle-container';
+document.body.appendChild(particleContainer);
+
+const particles = [];
+for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = Math.random() * 100 + 'vw';
+    particle.style.top = Math.random() * 100 + 'vh';
+    particle.style.width = Math.random() * 5 + 'px';
+    particle.style.height = particle.style.width;
+    particle.style.animationDuration = Math.random() * 3 + 2 + 's';
+    particleContainer.appendChild(particle);
+    particles.push(particle);
+}
+
+const particleStyle = document.createElement('style');
+particleStyle.innerHTML = `
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: move linear infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+`;
+document.head.appendChild(particleStyle);
+
