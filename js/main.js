@@ -25,8 +25,8 @@ themeSwitcher.addEventListener('click', () => {
 // Cursor Follower
 const cursorFollower = document.querySelector('.cursor-follower');
 window.addEventListener('mousemove', e => {
-    cursorFollower.style.top = e.pageY + 'px';
-    cursorFollower.style.left = e.pageX + 'px';
+    cursorFollower.style.top = e.clientY + 'px';
+    cursorFollower.style.left = e.clientX + 'px';
 });
 
 // Particle Background
