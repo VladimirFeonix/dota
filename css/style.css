@@ -383,6 +383,10 @@ body{
     overflow-x: hidden;
 }
 
+main {
+    padding-top: 84px; /* Header height */
+}
+
 .cursor-follower {
     position: fixed;
     top: 0;

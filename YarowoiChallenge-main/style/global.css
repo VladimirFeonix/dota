@@ -10,9 +10,8 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
     min-height: 100vh;
     background: var(--primary-gradient);
     background-image: url(/YarowoiChallenge/img/background.jpg);
