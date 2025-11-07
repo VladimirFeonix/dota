@@ -683,22 +683,22 @@ img{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: card-fade-in 0.5s forwards;
+    border: 1px solid #333;
+    background: var(--card);
+    transition: all 0.3s ease;
 }
 
-.places__card:nth-child(1) { animation-delay: 0.2s; }
-.places__card:nth-child(2) { animation-delay: 0.4s; }
-.places__card:nth-child(3) { animation-delay: 0.6s; }
-.places__card:nth-child(4) { animation-delay: 0.8s; }
-.places__card:nth-child(5) { animation-delay: 1s; }
+.places__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
 
 .places__card-pic{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    filter: brightness(0.8);
 }
 
 .places__card:hover .places__card-pic {

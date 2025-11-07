@@ -6,6 +6,8 @@ const randomizeBtn = document.querySelector('.randomize-btn');
 const updateChallengesBtn = document.getElementById('updateChallengesBtn');
 const volumeSlider = document.querySelector('.volume-slider');
 const volumeIcon = document.querySelector('.volume-icon');
+const spinSound = new Audio('/dota/sound/spin.mp3');
+const stopSound = new Audio('/dota/sound/stop.mp3');
 
 let selectedHeroes = [];
 
@@ -17,7 +19,7 @@ function createHeroCard(hero, attribute) {
     card.innerHTML = `
         <img src="${hero.image}" alt="${hero.name}" class="hero-image">
         <div class="attribute-info">
-            <img src="/dota/img/svg/${attribute}_ico.svg" alt="${attribute}" class="attribute-icon">
+            <img src="${hero.image}" alt="${attribute}" class="attribute-icon">
             <span class="attribute-name">${attribute}</span>
         </div>
         <div class="challenge-display"></div>
@@ -27,6 +29,8 @@ function createHeroCard(hero, attribute) {
             </div>
         </div>
     `;
+
+    card.addEventListener('click', () => rerollSingleHero(card));
 
     return card;
 }
@@ -83,16 +87,46 @@ function randomizeHeroes() {
     updateChallenges();
 }
 
+function rerollSingleHero(card) {
+    if (card.classList.contains('slot-spinning')) {
+        return;
+    }
+
+    card.classList.add('slot-spinning');
+    spinSound.play();
+
+    setTimeout(() => {
+        const allHeroes = [...HEROES.strength, ...HEROES.agility, ...HEROES.intellect, ...HEROES.universal];
+        const newHero = getRandomHeroes(allHeroes, 1)[0];
+        const newAttribute = getHeroAttribute(newHero.name);
+
+        card.classList.remove('strength', 'agility', 'intellect', 'universal');
+        card.classList.add(newAttribute);
+        card.dataset.heroName = newHero.name;
+
+        card.querySelector('.hero-image').src = newHero.image;
+        card.querySelector('.hero-image').alt = newHero.name;
+        card.querySelector('.attribute-icon').src = newHero.image;
+        card.querySelector('.attribute-name').textContent = newAttribute;
+        card.querySelector('.main').textContent = newHero.name;
+
+        card.classList.remove('slot-spinning');
+        card.classList.add('slot-landing');
+        stopSound.play();
+
+        setTimeout(() => {
+            card.classList.remove('slot-landing');
+        }, 500);
+    }, 1000);
+}
+
 randomizeBtn.addEventListener('click', randomizeHeroes);
 updateChallengesBtn.addEventListener('click', updateChallenges);
 
 volumeSlider.addEventListener('input', (e) => {
     const volume = e.target.value;
-    // Assuming you have an audio element with id="random-sound"
-    const randomSound = document.getElementById('random-sound');
-    if (randomSound) {
-        randomSound.volume = volume;
-    }
+    spinSound.volume = volume;
+    stopSound.volume = volume;
 });
 
 initializeApp();

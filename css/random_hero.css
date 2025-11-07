@@ -2,9 +2,6 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
     min-height: 100vh;
     background: var(--background);
     background-size: cover;
@@ -20,7 +17,7 @@ body {
     justify-content: center;
     flex: 1;
     width: 100%;
-    padding: 20px;
+    padding: 120px 20px 20px 20px;
 }
 
 /* Header */
@@ -59,52 +56,54 @@ body {
 .options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    min-width: 900px;
+    gap: 30px;
     max-width: 1200px;
-    width: calc(100% - 80px);
+    width: 100%;
     margin: 40px 0;
-    padding: 30px;
-    background: var(--card);
-    border-radius: 30px;
-    border: 2px solid #333;
+    padding: 0;
+    background: transparent;
+    border: none;
 }
 
 .option {
     position: relative;
     overflow: hidden;
     height: 420px;
-    border-radius: 20px;
-    border: 3px solid #333;
-    background: var(--background);
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: var(--card);
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .hero-image {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    width: calc(100% - 30px);
-    height: 200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     z-index: 0;
-    border-radius: 12px;
+    border-radius: 10px;
+    filter: brightness(0.8);
 }
 
 .attribute-info {
     position: absolute;
-    top: 225px;
+    top: 20px;
     left: 20px;
-    right: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     z-index: 2;
-    background: #111;
-    padding: 5px 15px;
-    border-radius: 12px;
-    border: 1px solid #333;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .attribute-icon {
@@ -127,15 +126,14 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 3;
-    background: #111;
-    padding: 18px 20px;
-    border-radius: 12px;
-    border: 2px solid #333;
-    height: 65px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    height: auto;
 }
 
 .info {
@@ -151,7 +149,7 @@ body {
 
 .main {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 4px;
     color: var(--foreground);
     letter-spacing: 0.5px;
@@ -165,12 +163,13 @@ body {
     color: #fff;
     padding: 15px 40px;
     font-size: 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     margin: 20px 0;
     z-index: 10;
     transition: all 0.3s;
+    text-transform: uppercase;
 }
 
 .randomize-btn:hover {
@@ -194,7 +193,7 @@ body {
     background: var(--primary);
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -202,7 +201,6 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid #333;
 }
 
 .challenge-update-btn:hover {
@@ -213,24 +211,21 @@ body {
 /* Challenges */
 .challenge-display {
     position: absolute;
-    top: 270px;
-    left: 12px;
-    right: 12px;
-    background: var(--primary);
+    bottom: 80px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.7);
     color: white;
-    padding: 10px 12px;
-    border-radius: 10px;
-    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
-    border: 2px solid #333;
     z-index: 5;
     line-height: 1.3;
-    height: 40px;
     display: none;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -284,6 +279,62 @@ body {
   border-radius: 50%;
   border: 2px solid #fff;
   cursor: pointer;
+}
+
+/* Animations */
+@keyframes slotSpin {
+    0% { transform: scale(1) rotateY(0deg); }
+    25% { transform: scale(0.95) rotateY(90deg); }
+    50% { transform: scale(0.9) rotateY(180deg); }
+    75% { transform: scale(0.95) rotateY(270deg); }
+    100% { transform: scale(1) rotateY(360deg); }
+}
+
+.slot-spinning {
+    animation: slotSpin 0.2s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+@keyframes slotLanding {
+    0% { 
+        transform: scale(0.9) rotateY(0deg);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+    50% { 
+        transform: scale(1.05) rotateY(0deg);
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+    }
+    100% { 
+        transform: scale(1) rotateY(0deg);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.slot-landing {
+    animation: slotLanding 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: 2px solid rgba(255, 215, 0, 0.6);
+}
+
+.slot-spinning .hero-image {
+    filter: blur(1px) brightness(1.2);
+    transition: filter 0.1s ease;
+}
+
+.slot-spinning .main {
+    filter: blur(0.5px);
+    transition: filter 0.1s ease;
+}
+
+.slot-landing .hero-image {
+    filter: brightness(1.1) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.slot-landing .main {
+    filter: none;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
 }
 
 /* Responsive */
