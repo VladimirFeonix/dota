@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
         <div class="wrapper">
             <div class="header__wrapper">
                 <div class="header__logo">
-                    <a href="/dota/index.html" class="header__logo-link">
+                    <a href="#home" class="header__logo-link">
                         <img src="/dota/img/zerif-tnw.png" alt="Невероятные приключения фантастического пати">
                     </a>
                 </div>
@@ -24,21 +24,19 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="/dota/index.html" class="header__link">Главная</a>
+                            <a href="#home" class="header__link">Главная</a>
                         </li>
                         <li class="header__item">
-                            <a href="https://vladimirfeonix.github.io/dota/#Commandments"
-                                class="header__link">Заповеди</a>
+                            <a href="#commandments" class="header__link">Заповеди</a>
                         </li>
                         <li class="header__item">
-                            <a href="/dota/index_card.html"
-                                class="header__link">Кароточки игроков</a>
+                            <a href="#players" class="header__link">Игроки</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#leaderboard" class="header__link">Лидерборд</a>
                         </li>
                         <li class="header__item">
                             <a href="https://dota2protracker.com/meta" class="header__link" target=»_blank>New Meta</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="/dota/index_leaderbord.html" class="header__link" target=»_blank>Таблица лидеров</a>
                         </li>
                     </ul>
                 </nav>
@@ -49,7 +47,7 @@
 
     <!--intro start-->
     <main class="main">
-        <section class="intro modern-hero-bg">
+        <section id="home" class="intro modern-hero-bg">
             <div class="wrapper">
                 <h1 class="intro__title">
                     Невероятные приключения Team No Win!
@@ -59,109 +57,378 @@
                     Даже если тебя умоляют зайти тем самым ПОСЛЕДНИМ на фулл пати, без желания играть толку от тебя не
                     будет.
                 </p>
-                <a href="#Commandments" class="button-primary modern-glow">Начать путь TeamNoWin</a>
+                <a href="#commandments" class="button-primary modern-glow">Начать путь TeamNoWin</a>
             </div>
         </section>
     </main>
     <!--intro end-->
 
-        <!--benefits start-->
-        <section class="benefits">
-            <div class="benefits__wrap">
-                <h2 class="benefits__title" id="Commandments">Дотерские заповеди!</h2>
-                <div class="benefits__cards">
-                    <div class="benefits__card">
-                        <div class="benefits__card-pic">
-                            <img src="/dota/img/svg/cherg_icon.svg" alt="Welcome to Odigo!" class="benefits__card-thump">
-                        </div>
-                        <h3 class="benefits__card-title">А на ком ты хочешь поиграть?
-                        </h3>
-                        <p class="benefits__card-desc"> Зачастую поиск занимает довольно много времени и именно ТЫ
-                            можешь за это время придумать себе парочку героев, что бы не ловить панику за 5 секунд до
-                            конца таймера.<br>И даже оговорить это с кентами, так вы повысите шансы на победу.
-                        </p>
+    <!--benefits start-->
+    <section id="commandments" class="benefits">
+        <div class="benefits__wrap">
+            <h2 class="benefits__title">Дотерские заповеди!</h2>
+            <div class="benefits__cards">
+                <div class="benefits__card">
+                    <div class="benefits__card-pic">
+                        <img src="/dota/img/svg/cherg_icon.svg" alt="Welcome to Odigo!" class="benefits__card-thump">
+                    </div>
+                    <h3 class="benefits__card-title">А на ком ты хочешь поиграть?
+                    </h3>
+                    <p class="benefits__card-desc"> Зачастую поиск занимает довольно много времени и именно ТЫ
+                        можешь за это время придумать себе парочку героев, что бы не ловить панику за 5 секунд до
+                        конца таймера.<br>И даже оговорить это с кентами, так вы повысите шансы на победу.
+                    </p>
 
+                </div>
+                <div class="benefits__card">
+                    <div class="benefits__card-pic">
+                        <img src="/dota/img/svg/person_ico.svg" alt="Your Personal Japan Guide"
+                            class="benefits__card-thump">
                     </div>
-                    <div class="benefits__card">
-                        <div class="benefits__card-pic">
-                            <img src="/dota/img/svg/person_ico.svg" alt="Your Personal Japan Guide"
-                                class="benefits__card-thump">
-                        </div>
-                        <h3 class="benefits__card-title">Говори больше.
-                        </h3>
-                        <p class="benefits__card-desc"> Это не зачит, что нужно обсуждать во время игры Наташу с второго
-                            подъезда, которую вчера по кругу пусили
-                            Если хочешь что-то сделать - предложи
-                            Если ты с чем-то не согласен - скажи
-                            На тебя напали и пытаются убить -ОРИ КАК СУКА, что бы твоим ТИММЕЙТЫ точно тебя услышали.
-                        </p>
+                    <h3 class="benefits__card-title">Говори больше.
+                    </h3>
+                    <p class="benefits__card-desc"> Это не зачит, что нужно обсуждать во время игры Наташу с второго
+                        подъезда, которую вчера по кругу пусили
+                        Если хочешь что-то сделать - предложи
+                        Если ты с чем-то не согласен - скажи
+                        На тебя напали и пытаются убить -ОРИ КАК СУКА, что бы твоим ТИММЕЙТЫ точно тебя услышали.
+                    </p>
+                </div>
+                <div class="benefits__card">
+                    <div class="benefits__card-pic">
+                        <img src="/dota/img/svg/building_ico.svg" alt="Promoting Local Businesses"
+                            class="benefits__card-thump">
                     </div>
-                    <div class="benefits__card">
-                        <div class="benefits__card-pic">
-                            <img src="/dota/img/svg/building_ico.svg" alt="Promoting Local Businesses"
-                                class="benefits__card-thump">
-                        </div>
-                        <h3 class="benefits__card-title">Сказано - сделано.
-                        </h3>
-                        <p class="benefits__card-desc">Если вам предложили гангануть/нажать смок/ подождать кд кнопок
-                            это значит, что вы идете гангать/нажимаете смок/ждете кд кнопок.
-                            Если не согласны - говорите сразу. Надо дофармить шмоту - скажите. Если вы этого не сказали
-                            заранее, значит идете и делаете то, что сказано.
-                        </p>
-                    </div>
+                    <h3 class="benefits__card-title">Сказано - сделано.
+                    </h3>
+                    <p class="benefits__card-desc">Если вам предложили гангануть/нажать смок/ подождать кд кнопок
+                        это значит, что вы идете гангать/нажимаете смок/ждете кд кнопок.
+                        Если не согласны - говорите сразу. Надо дофармить шмоту - скажите. Если вы этого не сказали
+                        заранее, значит идете и делаете то, что сказано.
+                    </p>
                 </div>
             </div>
-        </section>
-        <!--benefits end-->
+        </div>
+    </section>
+    <!--benefits end-->
 
-            <!--Videos start-->
+    <!--Начало карточек игроков-->
 
-            <div class="container">
-                <h1 class="open">Видео, что могут быть полезны!</h1>
-                <div class="gallery">
-                    <div class="wrap_video_item">
-                        <h3>Когда в тиме дауны</h3>
-                        <div class="video_item">
-                            <iframe width="350" height="185"
-                                src="https://www.youtube.com/embed/Sja2UH4O3Bk?si=lhM9I0WBzdmZ87fi"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div> <!-- END wrap_video_item -->
-                    <div class="wrap_video_item">
-                        <h3>Аккбаеры из глубин</h3>
-                        <div class="video_item">
-                            <iframe width="350" height="185"
-                                src="https://www.youtube.com/embed/dIFPF4dPoPE?si=yeQtNOG7F92Vdoky"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div> <!-- END wrap_video_item -->
-                    <div class="wrap_video_item">
-                        <h3>Как начать общаться в доте 2</h3>
-                        <div class="video_item">
-                            <iframe width="350" height="185"
-                                src="https://www.youtube.com/embed/EjOlYqMWlyc?si=ck_VnPZq2P6gHesB"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div> <!-- END wrap_video_item -->
+    <section id="players" class="places">
+        <div class="wrapper-full">
+            <div class="places__caption">
+                <h2 class="places__title section-title">
+                    Карточки игроков!
+                </h2>
+            </div>
+
+            <div class="places__cards">
+
+                <figure class="places__card places__card_size_lg">
+                    <img src="/dota/img/Image (3.1) (1).jpg" alt="Mount Fuji"
+                        class="places__card-pic places__card-pic_size_lg">
+                    <figcaption class="places__card-title">
+                        Максим "Винишко" Юдин
+                    </figcaption>
+                    <a href="#!" class="places__card-link"></a>
+                </figure>
+
+                <figure class="places__card places__card_size_lg">
+                    <img src="/dota/img/Image (2).jpg" alt="Kyoto" class="places__card-pic places__card-pic_size_lg">
+                    <figcaption class="places__card-title">
+                        Алексей "Сосал?" Абдрахманов
+                    </figcaption>
+                    <a href="#!" class="places__card-link"></a>
+                </figure>
+
+                <figure class="places__card places__card_size_sm">
+                    <img src="/dota/img/Image (1).jpg" alt="Tokyo" class="places__card-pic places__card-pic_size_sm">
+                    <figcaption class="places__card-title">
+                        Серёга "Prime" Курилов
+                    </figcaption>
+                    <a href="#!" class="places__card-link"></a>
+                </figure>
+
+                <figure class="places__card places__card_size_sm">
+                    <img src="/dota/img/Image (4).jpg" alt="Niigata" class="places__card-pic places__card-pic_size_sm">
+                    <figcaption class="places__card-title">
+                        Владимир "Филосов" Волков
+                    </figcaption>
+                    <a href="#!"
+                        class="places__card-link"></a>
+                </figure>
+
+                <figure class="places__card places__card_size_sm">
+                    <img src="/dota/img/Image (3.1) (2).jpg" alt="Sapporo"
+                        class="places__card-pic places__card-pic_size_sm">
+                    <figcaption class="places__card-title">
+                        Рафаиль "Сон Джин-Ву" Ханбиков
+                    </figcaption>
+                    <a href="#!" class="places__card-link"></a>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!--places end-->
+
+    <!--Card_player start-->
+
+    <div class="tours">
+        <div class="wrapper-full">
+            <div class="tours__tour tour">
+                <div class="tour__pic">
+                    <img src="/dota/img/Image (3.1) (1).jpg" alt="Максим Дорофеев" class="tour__thumb">
+                </div>
+                <div class="tour__info">
+                    <h3 class="tour__title">
+                        Максим "Винишко" Юдин
+                    </h3>
+                    <p class="tour__desc">
+                    <p>Возраст:&nbsp;&nbsp;25</p>
+                    <p>Позиция:&nbsp;&nbsp;жертва(С Саней стоит)</p>
+                    <p>Страна:&nbsp;&nbsp;Кыргызстан(предатель России)</p> Подробнее:&nbsp;&nbsp;Мозговитый
+                    Анимешник с деньгами, любит маленьких девочек и вино. Программировать научился, а добивать
+                    крипов - нет.
+                    </p>
                 </div>
             </div>
 
-            <!--Videos end-->
-
-            <!--Блок предупреждения start-->
-
-            <div class="box">
-                <!-- stuff -->
-                <p class="bet_time">ДИСКЛЕЙМЕР: Всё это шутка <br> и плод воображения автора!</p>
+            <div class="tours__tour tour">
+                <div class="tour__info">
+                    <h3 class="tour__title">
+                        Алексей "Сосал?" Абдрахманов
+                    </h3>
+                    <p class="tour__desc">
+                    <p>Возраст:&nbsp;&nbsp;Древнее него только сам Казахстан</p>
+                    <p>Позиция:&nbsp;&nbsp;Антимаг/пудж или тильт с нулевой</p>
+                    <p>Страна:&nbsp;&nbsp;Казахская Советская Социалистическая Республика</p>
+                    Подробнее:&nbsp;&nbsp;Топ 2 по скиллу в этом дискорде. Умеет играть, но редко хочет, а когда
+                    хочет , обычно под солями. Чиловый парень, нереальный гангстер и просто Широкой Души парень!
+                    </p>
+                </div>
+                <div class="tour__pic">
+                    <img src="/dota/img/Image (2).jpg" alt="Алексей Писарев" class="tour__thumb">
+                </div>
             </div>
 
-            <!--Блок предупреждения end-->
+            <div class="tours__tour tour">
+                <div class="tour__pic">
+                    <img src="/dota/img/Image (1).jpg" alt="Серёгей Курилов" class="tour__thumb">
+                </div>
+                <div class="tour__info">
+                    <h3 class="tour__title">
+                        Серёга "Prime" Курилов
+                    </h3>
+                    <p class="tour__desc">
+                    <p>Возраст:&nbsp;&nbsp;24 вроде бы</p>
+                    <p>Позиция:&nbsp;&nbsp;Рубик/саппорт/если керри - анлак</p>
+                    <p>Страна:&nbsp;&nbsp;Донецкая Народная Республика в составе Российской Федерации под
+                        командованием главнокомандующего Владимира Владимировича Путина</p>
+                    Подробнее:&nbsp;&nbsp;Топ 1 по скилу в дискорде и просто увереныый в себе парниша. Трушный
+                    анимешник, осуждает хентай и порно, но в тайне смотрит!
+                    </p>
+                </div>
+            </div>
+
+            <div class="tours__tour tour">
+                <div class="tour__info">
+                    <h3 class="tour__title">
+                        Владимир "Филосов" Волков
+                    </h3>
+                    <p class="tour__desc">
+                    <p>Возраст:&nbsp;&nbsp;27</p>
+                    <p>Позиция:&nbsp;&nbsp;Куда укажет судьба</p>
+                    <p>Страна:&nbsp;&nbsp;Истинный гражданин РФ</p> Подробнее:&nbsp;&nbsp;Опытный Анимешник.
+                    Обладатель титула "Знаток Хентая/Порно". Всё что можно осудить, моя тема!
+                    </p>
+                </div>
+                <div class="tour__pic">
+                    <img src="/dota/img/Image (4).jpg" alt="Владимир Волков" class="tour__thumb">
+                </div>
+            </div>
+
+            <div class="tours__tour tour">
+                <div class="tour__pic">
+                    <img src="/dota/img/Image (3.1) (2).jpg" alt="Roma" class="tour__thumb">
+                </div>
+                <div class="tour__info">
+                    <h3 class="tour__title">
+                        Рафаиль "Сон Джин-Ву" Ханбиков
+                    </h3>
+                    <p class="tour__desc">
+                    <p>Возраст:&nbsp;&nbsp;</p>
+                    <p>Позиция:&nbsp;&nbsp;Всё попало на мид/другая роль: тильт!</p>
+                    <p>Страна:&nbsp;&nbsp;Россия/родина Жигулёвского пива</p> Подробнее:&nbsp;&nbsp;Его легко
+                    потерять, трудно найти и невозможно забыть! Появляется так же внезапно как и пропадает.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="tours__tour tour">
+                <div class="tour__info">
+                    <h3 class="tour__title">
+                        Александр "Радио" Блахин
+                    </h3>
+                    <p class="tour__desc">
+                    <p>Возраст:&nbsp;&nbsp;25</p>
+                    <p>Позиция:&nbsp;&nbsp;Пудж обыкновенный "Кустовой"</p>
+                    <p>Страна:&nbsp;&nbsp;Казахская Советская Социалистическая Республика</p>
+                    Подробнее:&nbsp;&nbsp;Лучший друг Лехи, готов раздвинуть для Сани свои булочки
+                    </p>
+                </div>
+                <div class="tour__pic">
+                    <img src="/dota/img/Sanya.jpg" alt="Владимир Волков" class="tour__thumb">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--конец карточек игроков-->
+
+    <!--Liderbord start-->
+    <section id="leaderboard">
+        <p class="name_lider">Лидерборд дискорда</p>
+
+        <div class="Dota2_gift">
+            <table class="table_dota2">
+                <thead>
+                    <tr>
+                        <th class="name_teble2" align="center">
+                            &nbsp; &nbsp;Позиция в&nbsp;&nbsp;
+                            <br> Дискорде
+                        </th>
+                        <th class="player_table" width="400" align="left">&nbsp;&nbsp;Игpoк</th>
+                    </tr>
+                </thead>
+                <tbody class="table_dota2" id="leaderboard_body">
+                    <tr bgcolor="#181818">
+                        <td class="Position_name" align="center">1</td>
+                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
+                            &nbsp;&nbsp;
+                            <span class="team_tag">TNW.</span>
+                            <span class="player_name">Серёга "Prime" Курилов </span>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+                <tbody class="table_dota2" id="leaderboard_body">
+                    <tr bgcolor="#303030">
+                        <td class="Position_name" align="center">2</td>
+                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
+                            &nbsp;&nbsp;
+                            <span class="team_tag">TNW.</span>
+                            <span class="player_name">Алексей "Сосал?" Абдрахманов</span>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+                <tbody class="table_dota2" id="leaderboard_body">
+                    <tr bgcolor="#181818">
+                        <td class="Position_name" align="center">3</td>
+                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
+                            &nbsp;&nbsp;
+                            <span class="team_tag">TNW.</span>
+                            <span class="player_name">Владимир "Филосов" Волков</span>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+                <tbody class="table_dota2" id="leaderboard_body">
+                    <tr bgcolor="#303030">
+                        <td class="Position_name" align="center">4</td>
+                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
+                            &nbsp;&nbsp;
+                            <span class="team_tag">TNW.</span>
+                            <span class="player_name">Максим "Винишко" Юдин</span>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+                <tbody class="table_dota2" id="leaderboard_body">
+                    <tr bgcolor="#181818">
+                        <td class="Position_name" align="center">5</td>
+                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
+                            &nbsp;&nbsp;
+                            <span class="team_tag">TNW.</span>
+                            <span class="player_name">Рафаиль "Сон Джин-Ву" Ханбиков</span>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+                    <tbody class="table_dota2" id="leaderboard_body">
+                        <tr bgcolor="#303030">
+                            <td class="Position_name" align="center">6</td>
+                            <td align="left" style="overflow: hidden; max-width:300px;" width="300">
+                                &nbsp;&nbsp;
+                                <span class="team_tag">TNW.</span>
+                                <span class="player_name">Александр "Радио" Блахин</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!--Liderbord end-->
+
+    <!--Videos start-->
+
+    <div class="container">
+        <h1 class="open">Видео, что могут быть полезны!</h1>
+        <div class="gallery">
+            <div class="wrap_video_item">
+                <h3>Когда в тиме дауны</h3>
+                <div class="video_item">
+                    <iframe width="350" height="185"
+                        src="https://www.youtube.com/embed/Sja2UH4O3Bk?si=lhM9I0WBzdmZ87fi"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div> <!-- END wrap_video_item -->
+            <div class="wrap_video_item">
+                <h3>Аккбаеры из глубин</h3>
+                <div class="video_item">
+                    <iframe width="350" height="185"
+                        src="https://www.youtube.com/embed/dIFPF4dPoPE?si=yeQtNOG7F92Vdoky"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div> <!-- END wrap_video_item -->
+            <div class="wrap_video_item">
+                <h3>Как начать общаться в доте 2</h3>
+                <div class="video_item">
+                    <iframe width="350" height="185"
+                        src="https://www.youtube.com/embed/EjOlYqMWlyc?si=ck_VnPZq2P6gHesB"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div> <!-- END wrap_video_item -->
+        </div>
+    </div>
+
+    <!--Videos end-->
+
+    <!--Блок предупреждения start-->
+
+    <div class="box">
+        <!-- stuff -->
+        <p class="bet_time">ДИСКЛЕЙМЕР: Всё это шутка <br> и плод воображения автора!</p>
+    </div>
+
+    <!--Блок предупреждения end-->
 
     <footer class="modern-footer">
       <div class="modern-footer__container">

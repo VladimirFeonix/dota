@@ -365,10 +365,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-
-
-
 html{
     box-sizing: border-box;
 }
@@ -377,13 +373,12 @@ html{
 }
 
 body{
-    /* background: url(/dota/img/intro_background.jpg); — перемещаем управление фоном в классы или modern-vars */
-    background: var(--background);
-    color: var(--foreground);
-    font-family: 'Lato', Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.5;
     font-weight: normal;
 }
 
@@ -393,63 +388,55 @@ img{
 }
 
 .wrapper{
-    max-width: 1060px;
+    max-width: 1140px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .wrapper-full{
-    max-width: 1262px;
+    max-width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section-title{
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 42px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.section-title::after{
-    display: block;
-    content:'';
-    width: 253px;
-    height: 3px;
-    background-color: #006DFE;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #fff;
 }
 
 /*header styles start */
 
-header{
+.header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: .2s linear;
-    padding-bottom: 20px;
+    padding: 20px 0;
     z-index: 999;
+    background: rgba(0,0,0,0.8);
 }
 
 .header_active{
-    background: #0e1d28;
+    background: #000;
 }
 
 .header__wrapper{
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    padding-top: 62px;
 }
 .header__list{
     display: flex;
     flex-wrap: wrap;
 }
 .header__item{
-    margin-right: 82px;
+    margin-right: 40px;
 }
 .header__item:last-child{
     margin-right: 0;
@@ -457,11 +444,12 @@ header{
 .header__link{
     font-size: 18px;
     line-height: 24px;
-    color: rgba(196, 196, 196, 0.781);
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
-.header__link:hover, .header__link: :focus, .header__link:active{
-    opacity: .75;
+.header__link:hover, .header__link:focus, .header__link:active{
+    color: #ff4d4d;
 }
 
 /*header styles end */
@@ -471,76 +459,52 @@ header{
 
 .intro{
     min-height: 100vh;
+    background: url(/dota/img/intro_background.jpg) no-repeat center center;
     background-size: cover;
-    background-position: center;
-    padding-top: 263px;
-    padding-bottom: 223px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: none; }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .intro__title {
   font-weight: 700;
-  font-size: 56px;
+  font-size: 72px;
   line-height: 1.1;
-  color: var(--primary-foreground);
-  max-width: 700px;
-  margin-bottom: 22px;
-  opacity: 0;
-  animation: fadeIn 1s 0.2s ease-out forwards;
+  color: #fff;
+  max-width: 800px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
 .intro__subtitle {
-  max-width: 546px;
-  color: var(--foreground);
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 59px;
-  opacity: 0;
-  animation: fadeIn 1s 0.5s ease-out forwards;
+  max-width: 600px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 auto 40px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
-.search-form__info{
-    display: flex;
-    flex-wrap: wrap;
+.button-primary {
+  display: inline-block;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 18px 44px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: all .3s;
+  cursor: pointer;
+  text-decoration: none;
 }
-
-.search-form__field{
-    width: 297px;
-    background: transparent url(/dota/img/svg/circle_ico.svg) no-repeat left 9px;
-    background-size: 20px;
-    border: 0;
-    border-bottom: 2px solid #BFC0C5;
-    margin-right: 60px;
-    padding-left: 43px;
-    padding-bottom: 22px;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-}
-
-.search-form__field::placeholder{
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-}
-
-.search-form__sumbit{
-    padding: 15px 39px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-    background: #1B7DFF;
-    border: 0;
-}
-
-.search-form__sumbit:hover, .search-form__sumbit:focus, .search-form__sumbit:active{
-    background: #073a7f;
-
+.button-primary:hover, .button-primary:focus {
+  background: #fff;
+  color: #ff4d4d;
+  transform: scale(1.05);
 }
 
 /*intro styles end */
@@ -548,61 +512,50 @@ header{
 /*benefits styles start*/
 
 .benefits{
-    margin-bottom: 131px;
+    padding: 100px 0;
 }
 
 .benefits__wrap{
     max-width: 1262px;
-    background-color: white;
     margin: 0 auto;
-    box-shadow: 0px 2px 20px 0px #15182429;
-    position: relative;
 }
 
 .benefits__title{
     width: 100%;
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 42px;
-    padding: 93px 100px 88px 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
-    background-color: white;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #fff;
 }
 
 .benefits__cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 35px 24px;
-  padding: 0 34px 36px 34px;
+  gap: 30px;
   justify-content: center;
 }
 
 .benefits__card {
-  background: var(--card);
-  color: var(--foreground);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 36px 0 hsla(0 0% 0% / 0.22), var(--shadow-glow);
+  background: #222;
+  color: #eee;
+  border-radius: 10px;
   min-width: 260px;
-  max-width: 330px;
-  flex: 1 1 260px;
-  padding: 36px 32px 32px 32px;
-  margin-bottom: 0;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
-  border: 1.5px solid rgba(255,255,255,0.04);
+  max-width: 350px;
+  flex: 1 1 300px;
+  padding: 40px;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
 }
 .benefits__card:hover, .benefits__card:focus-within {
-  background: var(--accent);
-  color: var(--card);
-  transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 0 30px 6px hsl(45 100% 60% / 0.2), var(--shadow-glow);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .benefits__card-pic{
     max-width: 66px;
-    margin-bottom: 37px;
+    margin-bottom: 30px;
 }
 
 .benefits__card-thump{
@@ -610,113 +563,231 @@ header{
 }
 
 .benefits__card-title {
-  color: var(--primary-foreground);
-  font-size: 20px;
+  color: #ff4d4d;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .benefits__card-desc {
-  color: var(--foreground);
+  color: #ccc;
   font-size: 16px;
-  opacity: 0.95;
-}
-
-.benefits__card-more{
-    display: inline-block;
-    padding-right: 59px;
-    font-size: 16px;
-    line-height: 24px;
-    color: #006DFE;
-    text-decoration: none;
-    background: url(/dota/img/svg/arrow_right_ico.svg) no-repeat 95% center;
-    transition: .2s;
-}
-
-.benefits__card-more:hover, .benefits__card-more:focus{
-    background: url(/dota/img/svg/arrow_right_ico.svg) no-repeat right center;
+  line-height: 1.6;
 }
 
 /*benefits styles end*/
 
+/*places styles start*/
 
+.places{
+    padding: 100px 0;
+}
+
+.places__caption{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.places__title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.places__cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.places__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.places__card-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.places__card:hover .places__card-pic {
+    transform: scale(1.1);
+}
+
+.places__card-title{
+    font-size: 24px;
+    line-height: 1.2;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    z-index: 3;
+}
+
+.places__card-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+/*places styles end*/
+
+/*Card_player start*/
+
+.tours {
+    padding: 100px 0;
+}
+
+.tours__tour {
+    color: #eee;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+    background: #222;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.tour__pic {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tour__thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tour__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ff4d4d;
+}
+.tour__desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/*Card_player end*/
+
+/* Liderbord start */
+#leaderboard {
+    padding: 100px 0;
+}
+
+.name_lider {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 48px;
+    padding-bottom: 60px;
+    color: #fff;
+}
+
+.Dota2_gift {
+    padding-bottom: 100px;
+}
+
+.table_dota2 {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table_dota2 th, .table_dota2 td {
+  padding: 20px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #333;
+}
+
+.table_dota2 th {
+    background-color: #ff4d4d;
+    color: #fff;
+    text-align: left;
+}
+
+.table_dota2 tr:nth-child(even) {
+    background-color: #222;
+}
+
+.table_dota2 tr:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+.team_tag {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+.player_name {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.08em;
+}
+
+/* Liderbord end */
 
 
 /*Video start*/
 
+.container {
+    padding: 100px 0;
+}
+
 .gallery {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px 20px;
+  gap: 30px;
   padding-bottom: 100px;
 }
 .wrap_video_item {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 36px 0 hsla(0 0% 0% / 0.22); 
-  padding: 24px 16px 12px 16px;
-  transition: box-shadow .2s, transform .16s;
+  background: #222;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all .3s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 340px;
-  min-width: 220px;
-  animation: fadeIn 1s;
+  width: 350px;
+  border: 1px solid #333;
 }
 .wrap_video_item:hover {
-  box-shadow: 0 0 40px 6px var(--accent), 0 4px 36px 0 hsla(0 0% 0% / 0.18); 
-  transform: translateY(-6px) scale(1.04);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 .video_item iframe {
-  border-radius: calc(var(--radius) - 2px);
-  border: 2px solid var(--accent);
-  transition: box-shadow .15s, border-color .16s;
+  border-radius: 10px;
+  border: 2px solid #ff4d4d;
 }
-.video_item:hover iframe {
-  box-shadow: 0 0 38px 0 var(--accent);
-  border-color: var(--primary);
-}
+
 .open {
   text-align: center;
-  font-size: 2.18rem;
+  font-size: 48px;
   font-weight: bold;
-  color: var(--primary-foreground);
-  padding-bottom: 34px;
-  padding-top: 70px;
-  letter-spacing: 0.02em;
-  opacity: 0;
-  animation: fadeIn 1.1s 0.13s ease-out forwards;
+  color: #fff;
+  padding-bottom: 60px;
 }
 
-  video{
-    width: 100%;
-    height: auto;
-  }
-
-  .video_item:hover{
-    position: relative;
-    transform: scale(1.5);
-    z-index: 1;
-    transition-duration: .5s;
-    transition-timing-function: ease-out;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-
-  h2 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-  }
-  h3{
-    padding-bottom: 30px;
+h3{
+    padding-bottom: 20px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    color: white;
-  }
+    color: #ff4d4d;
+}
 
 /*Video end*/
 
@@ -728,81 +799,51 @@ header{
 
 .bet_time {
     position:fixed;
-    font-size: 19px;
-    color: white;
-    opacity: 0.2;
+    font-size: 14px;
+    color: #aaa;
+    opacity: 0.5;
     bottom:10px;
     right: 10px;
 }
 
 /*Disclamer end */
 
-.button-primary {
-  display: inline-block;
-  background: var(--gradient-hero);
-  color: var(--primary-foreground);
-  border: none;
-  border-radius: var(--radius);
-  padding: 18px 44px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  margin-top: 30px;
-  transition: box-shadow .3s, background .3s, scale .2s;
-  cursor: pointer;
-  box-shadow: var(--shadow-glow);
-}
-.button-primary:hover, .button-primary:focus {
-  background: var(--primary);
-  color: var(--primary-foreground);
-  box-shadow: 0 0 32px 8px hsl(0 84% 55% / 0.37), var(--shadow-glow);
-  scale: 1.04;
-}
-
 .modern-footer {
-  background: var(--card);
-  color: var(--foreground);
-  border-top: 1.5px solid rgba(255,255,255,0.04);
+  background: #000;
+  color: #eee;
   margin-top: 70px;
-  padding: 40px 0 18px 0;
+  padding: 40px 0 20px 0;
 }
 .modern-footer__container {
-  max-width: 1040px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 26px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 20px;
 }
 .modern-footer__about {
-  font-size: 1.12rem;
-  opacity: 0.87;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  font-size: 1rem;
+  opacity: 0.8;
 }
 .modern-footer__links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 .modern-footer__social {
   display: inline-block;
-  transition: transform .15s, filter .22s;
+  transition: all .3s;
 }
 .modern-footer__social:hover {
-  transform: scale(1.15) rotate(-3deg);
-  filter: brightness(1.5) drop-shadow(0 3px 16px var(--accent));
+  transform: scale(1.1);
 }
 .modern-footer__copyright {
   text-align: center;
-  color: var(--muted-foreground, #bbb);
-  font-size: .93rem;
-  opacity: 0.69;
-  margin-top: 18px;
+  color: #aaa;
+  font-size: .9rem;
+  opacity: 0.7;
+  margin-top: 20px;
   letter-spacing: 0.03em;
 }
-
-
