@@ -35,14 +35,14 @@ particleContainer.id = 'particle-container';
 document.body.appendChild(particleContainer);
 
 const particles = [];
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 150; i++) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
     particle.style.left = Math.random() * 100 + 'vw';
     particle.style.top = Math.random() * 100 + 'vh';
-    particle.style.width = Math.random() * 5 + 'px';
+    particle.style.width = Math.random() * 7 + 3 + 'px';
     particle.style.height = particle.style.width;
-    particle.style.animationDuration = Math.random() * 3 + 2 + 's';
+    particle.style.animationDuration = Math.random() * 5 + 5 + 's';
     particleContainer.appendChild(particle);
     particles.push(particle);
 }
@@ -51,7 +51,7 @@ const particleStyle = document.createElement('style');
 particleStyle.innerHTML = `
 .particle {
     position: absolute;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     animation: move linear infinite;
 }
