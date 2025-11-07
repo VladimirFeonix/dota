@@ -29,8 +29,8 @@ class AudioManager {
       this.gainNode.gain.value = this.masterVolume;
 
       // Load audio files
-      await this.loadAudio('/YarowoiChallenge/sounds/spin.mp3', 'spin');
-      await this.loadAudio('/YarowoiChallenge/sounds/stop.mp3', 'stop');
+      await this.loadAudio('sound/spin.mp3', 'spin');
+      await this.loadAudio('sound/stop.mp3', 'stop');
 
       // Initialize volume controls
       this.initVolumeControls();

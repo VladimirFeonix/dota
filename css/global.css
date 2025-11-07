@@ -10,12 +10,11 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
     min-height: 100vh;
     background: var(--primary-gradient);
-    background-image: url(/YarowoiChallenge/img/background.jpg);
+    background-image: url(../img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: var(--font-family);

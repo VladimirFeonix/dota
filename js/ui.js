@@ -131,4 +131,3 @@ export function handleMarciSpecialEffect(card, heroName) {
         card.appendChild(chooseMeElement);
     }
 }
-

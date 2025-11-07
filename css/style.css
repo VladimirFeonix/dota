@@ -505,7 +505,7 @@ img{
 
 .intro{
     min-height: 100vh;
-    background: url(/dota/img/intro_background.jpg) no-repeat center center;
+    background: url(../img/intro_background.jpg) no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;

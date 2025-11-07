@@ -1,3 +1,16 @@
+/**
+ * Dota 2 Hero Randomizer - Hero Data
+ * FOR Yarowoi Challenge
+ * 
+ * Contains the complete Dota 2 heroes database
+ * Developed by CHESIRE & GRIHLADIN
+ */
+
+// =============================================================================
+// HERO DATA
+// =============================================================================
+
+// Complete Dota 2 heroes database with image URLs
 export const HEROES = {
     strength: [
         { name: "Alchemist", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/alchemist.png" },
@@ -48,6 +61,7 @@ export const HEROES = {
         { name: "Gyrocopter", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/gyrocopter.png" },
         { name: "Hoodwink", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/hoodwink.png" },
         { name: "Juggernaut", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/juggernaut.png" },
+        { name: "Kez", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/kez.png" },
         { name: "Lone Druid", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lone_druid.png" },
         { name: "Luna", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/luna.png" },
         { name: "Medusa", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/medusa.png" },
@@ -87,12 +101,14 @@ export const HEROES = {
         { name: "Lich", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lich.png" },
         { name: "Lina", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lina.png" },
         { name: "Lion", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lion.png" },
+        { name: "Muerta", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/muerta.png" },
         { name: "Necrophos", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/necrolyte.png" },
         { name: "Oracle", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/oracle.png" },
         { name: "Outworld Destroyer", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/obsidian_destroyer.png" },
         { name: "Puck", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/puck.png" },
         { name: "Pugna", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/pugna.png" },
         { name: "Queen of Pain", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/queenofpain.png" },
+        { name: "Ringmaster", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/ringmaster.png" },
         { name: "Rubick", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/rubick.png" },
         { name: "Shadow Demon", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/shadow_demon.png" },
         { name: "Shadow Shaman", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/shadow_shaman.png" },
@@ -116,6 +132,7 @@ export const HEROES = {
         { name: "Dazzle", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/dazzle.png" },
         { name: "Death Prophet", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/death_prophet.png" },
         { name: "Enigma", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/enigma.png" },
+        { name: "Magnus", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/magnataur.png" },
         { name: "Marci", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/marci.png" },
         { name: "Nature's Prophet", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/furion.png" },
         { name: "Nyx Assassin", image: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/nyx_assassin.png" },
