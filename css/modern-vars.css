@@ -1,20 +1,30 @@
 :root {
   --background: hsl(220 20% 8%);
   --foreground: hsl(0 0% 98%);
-  --primary: hsl(0 84% 55%);
+  --primary: hsl(14, 88%, 55%);
   --primary-foreground: hsl(0 0% 100%);
   --card: hsl(220 18% 12%);
-  --accent: hsl(45 100% 50%);
+  --accent: hsl(34, 97%, 64%);
   --radius: 0.75rem;
 
-  --gradient-hero: linear-gradient(135deg, hsl(0 84% 55%) 0%, hsl(20 90% 50%) 100%);
-  --shadow-glow: 0 0 40px hsl(0 84% 55% / 0.3);
+  --gradient-hero: linear-gradient(135deg, hsl(14, 88%, 55%) 0%, hsl(34, 97%, 64%) 100%);
+  --shadow-glow: 0 0 40px hsl(14, 88%, 55% / 0.3);
+}
+
+.light-theme {
+  --background: hsl(0 0% 98%);
+  --foreground: hsl(220 20% 8%);
+  --primary: hsl(14, 88%, 55%);
+  --primary-foreground: hsl(0 0% 100%);
+  --card: hsl(0 0% 100%);
+  --accent: hsl(34, 97%, 64%);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Lato', Arial, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 a {

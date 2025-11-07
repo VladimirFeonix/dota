@@ -33,13 +33,14 @@
                             <a href="#players" class="header__link">Игроки</a>
                         </li>
                         <li class="header__item">
-                            <a href="#leaderboard" class="header__link">Лидерборд</a>
+                            <a href="#skill-graph" class="header__link">График скилла</a>
                         </li>
                         <li class="header__item">
                             <a href="https://dota2protracker.com/meta" class="header__link" target=»_blank>New Meta</a>
                         </li>
                     </ul>
                 </nav>
+                <button id="theme-switcher" class="theme-switcher">🌙</button>
             </div>
         </div>
     </header>
@@ -48,6 +49,7 @@
     <!--intro start-->
     <main class="main">
         <section id="home" class="intro modern-hero-bg">
+            <div id="animated-svg-container"></div>
             <div class="wrapper">
                 <h1 class="intro__title">
                     Невероятные приключения Team No Win!
@@ -285,101 +287,18 @@
     </div>
     <!--конец карточек игроков-->
 
-    <!--Liderbord start-->
-    <section id="leaderboard">
-        <p class="name_lider">Лидерборд дискорда</p>
-
-        <div class="Dota2_gift">
-            <table class="table_dota2">
-                <thead>
-                    <tr>
-                        <th class="name_teble2" align="center">
-                            &nbsp; &nbsp;Позиция в&nbsp;&nbsp;
-                            <br> Дискорде
-                        </th>
-                        <th class="player_table" width="400" align="left">&nbsp;&nbsp;Игpoк</th>
-                    </tr>
-                </thead>
-                <tbody class="table_dota2" id="leaderboard_body">
-                    <tr>
-                        <td class="Position_name" align="center">1</td>
-                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
-                            &nbsp;&nbsp;
-                            <span class="team_tag">TNW.</span>
-                            <span class="player_name">Серёга "Prime" Курилов </span>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-
-                <tbody class="table_dota2" id="leaderboard_body">
-                    <tr>
-                        <td class="Position_name" align="center">2</td>
-                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
-                            &nbsp;&nbsp;
-                            <span class="team_tag">TNW.</span>
-                            <span class="player_name">Алексей "Сосал?" Абдрахманов</span>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-
-                <tbody class="table_dota2" id="leaderboard_body">
-                    <tr>
-                        <td class="Position_name" align="center">3</td>
-                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
-                            &nbsp;&nbsp;
-                            <span class="team_tag">TNW.</span>
-                            <span class="player_name">Владимир "Филосов" Волков</span>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-
-                <tbody class="table_dota2" id="leaderboard_body">
-                    <tr>
-                        <td class="Position_name" align="center">4</td>
-                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
-                            &nbsp;&nbsp;
-                            <span class="team_tag">TNW.</span>
-                            <span class="player_name">Максим "Винишко" Юдин</span>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-
-                <tbody class="table_dota2" id="leaderboard_body">
-                    <tr>
-                        <td class="Position_name" align="center">5</td>
-                        <td align="left" style="overflow: hidden; max-width:300px;" width="300">
-                            &nbsp;&nbsp;
-                            <span class="team_tag">TNW.</span>
-                            <span class="player_name">Рафаиль "Сон Джин-Ву" Ханбиков</span>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-
-                    <tbody class="table_dota2" id="leaderboard_body">
-                        <tr>
-                            <td class="Position_name" align="center">6</td>
-                            <td align="left" style="overflow: hidden; max-width:300px;" width="300">
-                                &nbsp;&nbsp;
-                                <span class="team_tag">TNW.</span>
-                                <span class="player_name">Александр "Радио" Блахин</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </tbody>
-            </table>
+    <!--Skill Graph start-->
+    <section id="skill-graph" class="skill-graph">
+        <div class="wrapper">
+            <h2 class="section-title">График развития скилла команды</h2>
+            <div class="skill-graph__container">
+                <svg class="skill-graph__svg" viewBox="0 0 800 400">
+                    <polyline class="skill-graph__line" points="50,50 150,150 250,100 350,250 450,200 550,350 650,300 750,400" />
+                </svg>
+            </div>
         </div>
     </section>
-    <!--Liderbord end-->
+    <!--Skill Graph end-->
 
     <!--Videos start-->
 
