@@ -547,7 +547,29 @@ img{
   padding: 40px;
   transition: all 0.3s ease;
   border: 1px solid #333;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: card-fade-in 0.5s forwards;
 }
+
+.benefits__card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.benefits__card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.benefits__card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes card-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .benefits__card:hover, .benefits__card:focus-within {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
@@ -555,7 +577,7 @@ img{
 
 .benefits__card-pic{
     max-width: 66px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
 }
 
 .benefits__card-thump{
@@ -604,7 +626,16 @@ img{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: card-fade-in 0.5s forwards;
 }
+
+.places__card:nth-child(1) { animation-delay: 0.2s; }
+.places__card:nth-child(2) { animation-delay: 0.4s; }
+.places__card:nth-child(3) { animation-delay: 0.6s; }
+.places__card:nth-child(4) { animation-delay: 0.8s; }
+.places__card:nth-child(5) { animation-delay: 1s; }
 
 .places__card-pic{
     width: 100%;
@@ -658,6 +689,17 @@ img{
     padding: 40px;
     border-radius: 10px;
     border: 1px solid #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: card-fade-in 0.5s forwards;
+}
+
+.tours__tour:nth-child(odd) {
+    animation-delay: 0.3s;
+}
+
+.tours__tour:nth-child(even) {
+    animation-delay: 0.6s;
 }
 
 .tour__pic {
@@ -704,17 +746,20 @@ img{
 .table_dota2 {
   width: 100%;
   border-collapse: collapse;
+  text-align: center;
 }
 .table_dota2 th, .table_dota2 td {
   padding: 20px;
   font-size: 1.2em;
   border-bottom: 1px solid #333;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: row-fade-in 0.5s forwards;
 }
 
 .table_dota2 th {
     background-color: #ff4d4d;
     color: #fff;
-    text-align: left;
 }
 
 .table_dota2 tr:nth-child(even) {
@@ -725,6 +770,22 @@ img{
   background: #ff4d4d;
   color: #fff;
 }
+
+.table_dota2 tr:nth-child(1) { animation-delay: 0.2s; }
+.table_dota2 tr:nth-child(2) { animation-delay: 0.4s; }
+.table_dota2 tr:nth-child(3) { animation-delay: 0.6s; }
+.table_dota2 tr:nth-child(4) { animation-delay: 0.8s; }
+.table_dota2 tr:nth-child(5) { animation-delay: 1s; }
+.table_dota2 tr:nth-child(6) { animation-delay: 1.2s; }
+
+
+@keyframes row-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .team_tag {
   color: #ff4d4d;
   font-weight: bold;
@@ -763,7 +824,14 @@ img{
   align-items: center;
   width: 350px;
   border: 1px solid #333;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: card-fade-in 0.5s forwards;
 }
+
+.wrap_video_item:nth-child(1) { animation-delay: 0.2s; }
+.wrap_video_item:nth-child(2) { animation-delay: 0.4s; }
+.wrap_video_item:nth-child(3) { animation-delay: 0.6s; }
 .wrap_video_item:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
