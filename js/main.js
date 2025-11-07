@@ -75,7 +75,7 @@ function randomizeHeroes() {
     heroContainer.innerHTML = '';
     randomHeroes.forEach(hero => {
         const attribute = getHeroAttribute(hero.name);
-        const card = createHero-card(hero, attribute);
+        const card = createHeroCard(hero, attribute);
         heroContainer.appendChild(card);
     });
 
