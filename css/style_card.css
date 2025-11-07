@@ -36,7 +36,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	line-height: 1;
+  font-family: 'Montserrat', 'Crimson Text', Arial, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
 }
 
 ol, ul {
@@ -425,12 +428,12 @@ img{
     margin: 0 auto;
 }
 
-.section-title{
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 42px;
-    position: relative;
-    padding-bottom: 10px;
+.section-title, .places__title, .tour__title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--primary-foreground, #fff);
+  margin-bottom: 16px;
 }
 
 .section-title::after{
@@ -671,27 +674,16 @@ margin-bottom: 59px;
     grid-gap: 10px;
 }
 
-.places__card{
-    position: relative;
-    overflow: hidden;
+.places__card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 32px -8px hsl(0 84% 55% / 0.10);
+  transition: box-shadow 0.17s, transform 0.18s;
 }
-
-.places__card:hover .places__card-pic{
-    transform: scale(1.05);
+.places__card:hover {
+  box-shadow: 0 8px 40px 0 var(--accent), 0 4px 32px -8px hsla(0 0% 0% / 0.14);
+  transform: translateY(-6px) scale(1.04);
 }
-
-.places__card::after{
-    display: block;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: rgba(21, 24, 36, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2s;
-}
-
 .places__card-title{
     font-size: 25px;
     line-height: 60px;
@@ -751,18 +743,32 @@ margin-bottom: 59px;
     margin-bottom: 77px;
 }
 
-.tour__title{
-    display: inline;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 40px;
-    margin-bottom: 85px;
+.tour {
+  border-radius: var(--radius);
+  box-shadow: 0 4px 32px -8px hsl(0 84% 55% / 0.10);
+  background: var(--card);
+  color: var(--foreground);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 18px 20px;
+  transition: box-shadow 0.17s, background 0.19s;
 }
-
-.tour__desc{
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 58px;
+.tour:hover {
+  background: var(--gradient-hero);
+  color: var(--card);
+}
+.tour__title {
+  font-size: 1.4em;
+  margin-bottom: 9px;
+}
+.tour__desc {
+  font-size: 1.08em;
+  opacity: 0.92;
+}
+.tour__thumb, .places__card-pic {
+  border-radius: calc(var(--radius) - 2px);
 }
 
 /*Card_player end*/

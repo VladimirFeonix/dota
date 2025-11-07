@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamNoWin</title>
+    <link rel="stylesheet" href="/dota/css/modern-vars.css">
     <link rel="stylesheet" href="/dota/css/style_card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Montserrat', 'Crimson Text', Arial, sans-serif; }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -44,16 +49,11 @@
 
     <!--intro start-->
     <main class="main">
-        <section class="intro">
+        <section class="intro modern-hero-bg">
             <div class="wrapper">
-                <h1 class="intro__title">
-                    Невероятные приключения Team No Win!
-                </h1>
-                <p class="intro__subtitle">
-                    Помни главное брат! Если не хочешь играть в доту -не играй.
-                    Даже если тебя умоляют зайти тем самым ПОСЛЕДНИМ на фулл пати, без желания играть толку от тебя не
-                    будет.
-                </p>
+                <h1 class="intro__title">Невероятные приключения Team No Win!</h1>
+                <p class="intro__subtitle">Помни главное брат! Если не хочешь играть в доту - не играй. Даже если тебя умоляют зайти тем самым ПОСЛЕДНИМ на фулл пати, без желания играть толку от тебя не будет.</p>
+                <a href="#Player cards" class="button-primary modern-glow">Смотреть карточки</a>
             </div>
         </section>
     </main>
@@ -245,9 +245,23 @@
                 </div>
     
                 <!--Блок предупреждения end-->
-<main>
-    <script src="/dota/js/main.js"></script>
-</main>
-
+<footer class="modern-footer">
+  <div class="modern-footer__container">
+    <div class="modern-footer__about">
+      <img src="/dota/img/zerif-tnw.png" alt="Logo TeamNoWin" style="height:48px; margin-bottom:10px;">
+      <div>Team No Win — портал о невероятных друзьях-дотерах</div>
+    </div>
+    <div class="modern-footer__links">
+      <a href="https://t.me" target="_blank" aria-label="Telegram" class="modern-footer__social">
+        <img src="/dota/img/svg/person_ico.svg" alt="Telegram" height="28" style="filter:invert(1)">
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="modern-footer__social">
+        <img src="/dota/img/web-ico.png" alt="YouTube" height="28" style="filter:invert(1)">
+      </a>
+    </div>
+  </div>
+  <div class="modern-footer__copyright">© 2024 Team No Win. Все права защищены.</div>
+</footer>
+<script src="/dota/js/main.js"></script>
 </body>
 </html>

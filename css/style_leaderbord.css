@@ -37,6 +37,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+  font-family: 'Montserrat', 'Crimson Text', Arial, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
 }
 
 ol, ul {
@@ -577,32 +581,30 @@ margin-bottom: 59px;
 }
 
 .table_dota2 {
-    position:relative;
-    z-index: 2;
-    margin:0 auto;
-    border-color: #3b3a38;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 }
-
-.player_table {
-    align-items: center;
-    margin: 0 auto;
-    width: 70px;
-
-    color: rgb(163, 163, 163);
-    background-color: #000;
+.table_dota2 th, .table_dota2 td {
+  padding: 16px 16px;
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--foreground);
+  font-size: 1.19em;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
 }
-
-.Position_name {
-    color: white;
+.table_dota2 tr:hover td {
+  background: var(--accent);
+  color: var(--card);
+  box-shadow: 0 4px 32px 0 var(--accent);
 }
-
 .team_tag {
-    color: white;
-    opacity: 0.5;
+  color: var(--primary);
+  font-weight: bold;
 }
-
 .player_name {
-    color: white;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.08em;
 }
 
 table, th, td { border: 1px solid rgb(63, 63, 63); }
